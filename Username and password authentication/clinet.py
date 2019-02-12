@@ -13,4 +13,5 @@ s.sendto(username.encode(),((UDP_IP,UDP_PORT)))
 s.sendto(password.encode(),((UDP_IP,UDP_PORT)))
 
 result,addr=s.recvfrom(1024)
+
 print(result.decode())

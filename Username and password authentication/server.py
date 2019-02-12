@@ -13,8 +13,8 @@ a=[]
 b=[]
 a.append('admin')
 b.append('admin')
-a.append('user')
-b.append('data')
+a.append('vidit')
+b.append('vidit')
 a.append('tcp')
 b.append('udp')
 
@@ -27,11 +27,13 @@ while True:
     k=0
     for i in range (3):
         if(password==b[i] and username==a[i]):
+            print("Verified")
             s.sendto('Access Granted'.encode(),addr)
             break;
         else:
             k=k+1;
     if(k==3):
+        print("Not Verified")
         s.sendto('Please Check your username and password'.encode(),addr)
     
     
